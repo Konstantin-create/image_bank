@@ -17,4 +17,5 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
+from app.models import *
 from app.routes import *
