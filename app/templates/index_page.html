@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>ImageBank - Index page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_styles.css') }}">
 </head>
 <body>
-<form method="post" action=".add/image">
-    <label class="input-file">
-        <input type="file" name="image" id="preview-image">
-        <span id="image-text">Select image</span>
-    </label>
-</form>
+<main>
+    <form method="post" action=".add/image">
+        <label class="input-file">
+            <input type="file" name="image" id="preview-image">
+            <span id="image-text">Select image</span>
+        </label>
+    </form>
+</main>
 <script>
     let image_output = document.getElementById('preview-image-text');
     const image = document.getElementById('preview-image');
