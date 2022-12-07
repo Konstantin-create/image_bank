@@ -26,7 +26,17 @@ main {
     font-size: 40px;
     color: #EDF2EF;
     text-align: center;
-    padding: 150px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+.sub-header {
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #EDF2EF;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .header-items {
