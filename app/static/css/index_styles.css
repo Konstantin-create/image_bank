@@ -20,6 +20,15 @@ main {
     background-color: #000807;
 }
 
+.main-header {
+    /*Cantarell*/
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 40px;
+    color: #EDF2EF;
+    text-align: center;
+    padding: 150px;
+}
+
 .header-items {
     width: 35%;
     display: flex;
