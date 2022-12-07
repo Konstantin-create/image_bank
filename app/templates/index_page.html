@@ -5,6 +5,25 @@
     <title>ImageBank - Index page</title>
 </head>
 <body>
+<form method="post" action=".add/image">
+    <label class="input-file">
+        <input type="file" name="image" id="preview-image">
+        <span id="image-text">Select image</span>
+    </label>
+</form>
+<script>
+    let image_output = document.getElementById('preview-image-text');
+    const image = document.getElementById('preview-image');
 
+    image.addEventListener('change', (event) => {
+        const files = event.target.files;
+        image_output.textContent = '';
+
+        for (const file of files) {
+            preview_output.textContent = file.name;
+        }
+    })
+
+</script>
 </body>
 </html>
