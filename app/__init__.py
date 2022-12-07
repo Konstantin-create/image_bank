@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template
 
 # Flask init
-app = Flask(__file__)
+app = Flask(__name__)
 app.config.from_object(Config)
 
 # DB init
