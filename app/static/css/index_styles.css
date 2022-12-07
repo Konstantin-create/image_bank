@@ -60,12 +60,18 @@ main {
     width: 100%;
 }
 
+.image-form {
+    display: flex;
+    justify-content: space-around;
+}
+
 .input-file {
     position: relative;
     display: inline-block;
+    width: 300px;
 }
 
-.post-image-name {
+.image-name {
     float: left;
     font-family: Roboto, sans-serif;
     font-size: 20px;
@@ -89,12 +95,12 @@ main {
     text-align: center;
     border-radius: 10px;
     background-color: #202020;
-    line-height: 2em;
-    height: 2em;
-    width: 200px;
+    line-height: 3.5em;
+    height: 3.5em;
+    width: 300px;
     box-sizing: border-box;
     border: none;
-    margin: 0 20px 10px;
+    margin: 0 0;
     transition: background-color 0.2s;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
 }
