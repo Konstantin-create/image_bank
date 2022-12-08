@@ -16,25 +16,26 @@
 </header>
 <main>
     <h1 class="main-header">ImageBank - direct links to images</h1>
-    <form method="post" action="add/image" class="image-form">
+    <form method="post" action="add/image" class="image-form" id="image-form">
         <label class="input-file">
-            <input type="file" name="image" id="preview-image">
+            <input type="file" name="image" id="image">
             <span id="image-text">Load image</span>
         </label>
     </form>
     <h3 class="sub-header">fast and convenient image server for your website</h3>
 </main>
 <script>
-    let image_output = document.getElementById('preview-image-text');
-    const image = document.getElementById('preview-image');
+    let image_output = document.getElementById('image-text');
+    const image = document.getElementById('image');
 
     image.addEventListener('change', (event) => {
         const files = event.target.files;
         image_output.textContent = '';
 
         for (const file of files) {
-            preview_output.textContent = file.name;
+            image_output.textContent = file.name;
         }
+        document.forms["image-form"].submit()
     })
 </script>
 </body>
