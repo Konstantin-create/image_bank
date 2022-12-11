@@ -16,4 +16,4 @@ def image_page(image_id: int):
     image = get_image(image_id)
     if not image:
         return '404'
-    return render_template('image.html', image_id=image.id)
+    return render_template('image.html', image_id=str(image.id))
