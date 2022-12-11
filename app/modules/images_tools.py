@@ -1,14 +1,16 @@
+from typing import Union
+
 from app import db
 from app.modules.models import Image
 
 
-def get_last_id() -> int:
+def get_last_id() -> Union[int, None]:
     """Function to return last image id"""
 
     return Image.query.order_by(Image.id.desc()).first().id
 
 
-def get_image(image_id: int) -> Image:
+def get_image(image_id: int) -> Union[Image, None]:
     """Function to return image obj"""
 
     return Image.query.get(image_id)
