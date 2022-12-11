@@ -51,3 +51,23 @@
     padding-left: 50px;
     line-height: 2em;
 }
+
+.delete-image {
+    font-family: "Roboto Light", sans-serif;
+    color: #EDF2EF;
+    width: 150px;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background-color: #e80909;
+    box-shadow: 0 0 10px rgba(178, 7, 7, 0.5);
+    cursor: pointer;
+    border-radius: 10px;
+
+    margin: 20px 50px;
+}
+
+.delete-image {
+    background-color: #b20707;
+    box-shadow: 0 0 10px rgba(178, 7, 7, 0.5);
+}
