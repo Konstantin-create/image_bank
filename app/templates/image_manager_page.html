@@ -17,12 +17,15 @@
     </div>
 </header>
 <main>
-    <img src="http://127.0.0.1:5000/img/{{ image.id }}" class="main-image" alt="image">
-    <div class="image-link">
-        <p class="image-link-text"></p>
-        <button class="image-link-button" value="Copy!"></button>
+    <div class="main-image-div">
+        <img src="/img/{{ image.id }}" class="main-image" alt="image">
     </div>
-    <p class="image-timestamp">{{ image.time_stamp }}</p>
+    <div class="image-link">
+        <p class="image-link-text">http://127.0.0.1:5000/img/{{ image.id }}</p>
+        <button class="image-link-button">Copy!</button>
+
+    </div>
+    <p class="image-timestamp">Post time stamp: {{ image.time_stamp.strftime("%Y-%m-%d %H:%M") }}</p>
 </main>
 </body>
 </html>

@@ -21,8 +21,7 @@ def image_manager_page(image_id: int):
         'image_manager_page.html',
         image=image,
         content_data=content_data,
-        ip=request.remote_addr,
-        str=lambda x: str(x)
+        ip=request.remote_addr
     )
 
 

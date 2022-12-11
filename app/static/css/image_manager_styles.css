@@ -1,4 +1,6 @@
-main {
+.main-image-div {
+    width: 100%;
+
     display: flex;
     justify-content: center;
 }
@@ -8,4 +10,44 @@ main {
     max-height: 600px;
     overflow: scroll;
     border-radius: 10px;
+    margin: 20px;
+}
+
+
+.image-link {
+    display: flex;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 2em;
+    margin-left: 50px;
+    background-color: rgba(32, 32, 32, 0.5);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(32, 32, 32, 0.2);
+}
+
+.image-link-text {
+    font-family: "Roboto Thin", sans-serif;
+    color: #EDF2EF;
+    line-height: 2em;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.image-link-button {
+    width: 50px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(32, 32, 32, 0.8);
+    color: #EDF2EF;
+    cursor: pointer;
+}
+
+
+.image-timestamp {
+    font-family: "Roboto Light", sans-serif;
+    color: #EDF2EF;
+    padding-top: 10px;
+    padding-left: 50px;
+    line-height: 2em;
 }
