@@ -1,13 +1,14 @@
-from app import app, render_template
 from app.modules.images_tools import *
+from app import app, render_template, request
+
+content_data = {
+    'headers': ['My web-site', 'GitHub'],
+    'header_links': ['https://hacknet-dev.tech/', 'https://github.com/Konstantin-create/']
+}
 
 
 @app.route('/')
 def index_page():
-    content_data = {
-        'headers': ['My web-site', 'GitHub'],
-        'header_links': ['https://hacknet-dev.tech/', 'https://github.com/Konstantin-create/']
-    }
     return render_template('index_page.html', content_data=content_data)
 
 
@@ -16,7 +17,7 @@ def image_manager_page(image_id: int):
     image = get_image(image_id)
     if not image:
         return '404'
-    return render_template('image_manger_page.html', image=image)
+    return render_template('image_manager_page.html', image=image, content_data=content_data, ip=request.remote_addr)
 
 
 @app.route('/img/<int:image_id>')
