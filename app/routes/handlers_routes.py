@@ -18,4 +18,3 @@ def add_image():
         db.session.add(image_obj)
         db.session.commit()
         return redirect(f'/image/{current_id}')
-    return redirect('/')
