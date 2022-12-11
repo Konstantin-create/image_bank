@@ -7,6 +7,8 @@ from app.modules.models import Image
 def get_last_id() -> Union[int, None]:
     """Function to return last image id"""
 
+    if not Image.query.get(1):
+        return 0
     return Image.query.order_by(Image.id.desc()).first().id
 
 
@@ -21,6 +23,7 @@ def add_image(image_path: str, from_ip: str) -> bool:
 
     try:
         image = Image(image_path=image_path, from_ip=from_ip)
+        print(image)
 
         db.session.add(image)
         db.session.commit()

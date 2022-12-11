@@ -5,7 +5,7 @@ from app import app, render_template, request, redirect
 
 
 @app.route('/add/image', methods=['GET', 'POST'])
-def add_image():
+def add_image_handler():
     if request.method == 'POST':
         image = request.files['image']
         if not image:
@@ -14,7 +14,5 @@ def add_image():
         current_id = get_last_id() + 1
         image.save(f'app/static/data/image-{current_id}.jpg')
 
-        image_obj = add_image(image_path=f'app/static/data/image-{current_id}.jpg', from_ip=request.remote_addr)
-        db.session.add(image_obj)
-        db.session.commit()
+        add_image(f'app/static/data/image-{current_id}.jpg', request.remote_addr)
         return redirect(f'/image/{current_id}')
