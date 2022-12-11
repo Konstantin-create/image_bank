@@ -17,7 +17,12 @@
     </div>
 </header>
 <main>
-    <img src="{{ url_for('static', filename='data/image-'+ str(image.id) + '.jpg') }}" class="main-image" alt="image">
+    <img src="http://127.0.0.1:5000/img/{{ image.id }}" class="main-image" alt="image">
+    <div class="image-link">
+        <p class="image-link-text"></p>
+        <button class="image-link-button" value="Copy!"></button>
+    </div>
+    <p class="image-timestamp">{{ image.time_stamp }}</p>
 </main>
 </body>
 </html>

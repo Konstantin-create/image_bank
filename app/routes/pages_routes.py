@@ -1,5 +1,5 @@
 from app.modules.images_tools import *
-from app import app, render_template, request
+from app import app, render_template, request, send_file
 
 content_data = {
     'headers': ['My web-site', 'GitHub'],
@@ -31,4 +31,4 @@ def image_page(image_id: int):
     image = get_image(image_id)
     if not image:
         return '404'
-    return render_template('image_page.html', image_id=str(image.id))
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
