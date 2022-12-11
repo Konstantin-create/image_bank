@@ -11,9 +11,17 @@ def index_page():
     return render_template('index_page.html', content_data=content_data)
 
 
-@app.route('/image/<int:image_id>')
+@app.route('/image-manager/<int:image_id>')
+def image_manager_page(image_id: int):
+    image = get_image(image_id)
+    if not image:
+        return '404'
+    return render_template('image_manger_page.html', image=image)
+
+
+@app.route('/img/<int:image_id>')
 def image_page(image_id: int):
     image = get_image(image_id)
     if not image:
         return '404'
-    return render_template('image.html', image_id=str(image.id))
+    return render_template('image_page.html', image_id=str(image.id))
