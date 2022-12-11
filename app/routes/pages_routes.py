@@ -17,7 +17,13 @@ def image_manager_page(image_id: int):
     image = get_image(image_id)
     if not image:
         return '404'
-    return render_template('image_manager_page.html', image=image, content_data=content_data, ip=request.remote_addr)
+    return render_template(
+        'image_manager_page.html',
+        image=image,
+        content_data=content_data,
+        ip=request.remote_addr,
+        str=lambda x: str(x)
+    )
 
 
 @app.route('/img/<int:image_id>')

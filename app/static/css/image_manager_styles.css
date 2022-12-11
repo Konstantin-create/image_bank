@@ -1,0 +1,11 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.main-image {
+    max-width: 90%;
+    max-height: 600px;
+    overflow: scroll;
+    border-radius: 10px;
+}
