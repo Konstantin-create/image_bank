@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konstantin-create Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/login_page_style.css') }}">
+</head>
+<body>
+    <div class="login-form">
+        <form action="/admin/login/form" method="post">
+            <h2 class="input-header">Login</h2>
+            <input type="text" class="input-field" autofocus name="username">
+            <input type="password" class="input-field" name="password">
+            {% if error_code == 200 %}
+            <p class="error-text">Username or password are incorrect!</p>
+            {% endif %}
+            {% if error_code == 400 %}
+            <p class="error-text">Fields username and password must be filled!</p>
+            {% endif %}
+            <input type="submit" class="input-field submit-field">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/template_styles.css') }}">
+    {% block title %}{% endblock %}
+    {% block styles %}{% endblock %}
+</head>
+<body>
+<aside>
+    <div class="imgs">
+        <a href="/admin/dashboard">
+            <img src="{{ url_for('static', filename='img/admin/statistics.png') }}" alt=""
+                 class="aside-img" id="img-1">
+        </a>
+        <a href="/admin/images">
+            <img src="{{ url_for('static', filename='img/admin/images.png') }}" alt="" class="aside-img" id="img-3">
+        </a>
+        <a href="/admin/logout">
+            <img src="{{ url_for('static', filename='img/admin/logout.png') }}" alt="" class="logout-img">
+        </a>
+    </div>
+</aside>
+<main>
+    <header>
+        {% block page_name %}{% endblock %}
+    </header>
+    {% block content %}{% endblock %}
+</main>
+{% block js %}{% endblock %}
+</body>

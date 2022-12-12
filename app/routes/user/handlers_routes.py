@@ -1,7 +1,5 @@
 from app.modules.images_tools import *
-
-from app import db
-from app import app, render_template, request, redirect
+from app import app, request, redirect
 
 
 @app.route('/add/image', methods=['GET', 'POST'])

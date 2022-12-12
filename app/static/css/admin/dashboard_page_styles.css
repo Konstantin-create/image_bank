@@ -1,0 +1,40 @@
+aside {
+    height: auto;
+}
+
+main {
+    padding-left: 75px;
+}
+
+a {
+    text-decoration: none;
+    color: #EDF2EF;
+}
+
+.main-stat {
+    width: 800px;
+    height: auto;
+    min-height: 400px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(28, 28, 28, .5);
+
+    margin: 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.main-stat-header {
+    font-family: Cantarell, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #EDF2EF;
+    padding-bottom: 10px;
+}
+
+.main-stat-el {
+    font-family: Roboto, sans-serif;
+    color: #EDF2EF;
+    padding-top: 5px;
+    padding-left: 10px;
+}

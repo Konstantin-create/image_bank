@@ -1,0 +1,22 @@
+{% extends 'admin/admin_template.html' %}
+
+{% block title %}<title>Image Bank - Dashboard</title>{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin/dashboard_page_styles.css') }}">
+{% endblock %}}
+
+{% block page_name %}<h1 class="header-title">Dashboard</h1>{% endblock %}
+
+{% block content %}
+<div class="main-stat">
+    <p class="main-stat-header">Images statistics:</p>
+    <p class="main-stat-el">Total images: 10</p>
+    <p class="main-stat-el">Unique IP`s: 4</p>
+    <p class="main-stat-el">Most active image: image-1</p>
+</div>
+<!--todo: add logs-->
+{% endblock %}
+
+{% block js %}
+{% endblock %}
