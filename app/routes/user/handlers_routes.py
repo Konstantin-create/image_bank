@@ -13,4 +13,4 @@ def add_image_handler():
         image.save(f'app/static/data/image-{current_id}.jpg')
 
         add_image(f'app/static/data/image-{current_id}.jpg', request.remote_addr)
-        return redirect(f'/image/{current_id}')
+        return redirect(f'/image-manager/{current_id}')
