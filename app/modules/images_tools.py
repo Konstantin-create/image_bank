@@ -18,6 +18,12 @@ def get_image(image_id: int) -> Union[Image, None]:
     return Image.query.get(image_id)
 
 
+def get_images() -> list:
+    """Function to get list of all images"""
+
+    return Image.query.all()
+
+
 def add_image(image_path: str, from_ip: str) -> bool:
     """Function to add image"""
 
@@ -42,3 +48,9 @@ def delete_image(image_id: int) -> bool:
         return True
     except:
         return False
+
+
+def get_unique_ips(images: list) -> set:
+    """Function to count unique ips"""
+
+    return set(images)

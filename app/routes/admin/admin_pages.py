@@ -2,9 +2,7 @@ from app import app, render_template, redirect
 
 from flask_login import current_user
 from app.modules.models import *
-
-from sqlalchemy import func
-from sqlalchemy.sql import label
+from app.modules.images_tools import *
 
 
 @app.route('/admin/login')
@@ -17,15 +15,11 @@ def admin_dashboard_page():
     if not current_user.is_authenticated:
         return redirect('/admin/login')
 
-    images = Image.query.all()
-    unique_ips = set()
-    for image in images:
-        unique_ips.add(image.from_ip)
-
+    images = get_images()
     data = {
         'images': {
             'total': len(images),
-            'unique_ip': len(unique_ips)
+            'unique_ip': len(get_unique_ips(images))
         }
     }
     return render_template('admin/dashboard_page.html', data=data)
