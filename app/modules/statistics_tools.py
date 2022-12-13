@@ -17,7 +17,7 @@ def set_image_stat(new_data: list) -> None:
     """Function to add image statistics"""
 
     try:
-        json.dump(new_data, open(f'{app_folder}/data/images_requests.json', 'w'))
+        json.dump(new_data, open(f'{app_folder}/data/images_requests.json', 'w'), indent=2)
     except:
         pass
 
