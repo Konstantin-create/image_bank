@@ -11,8 +11,8 @@
 {% block content %}
 <div class="main-stat">
     <p class="main-stat-header">Images statistics:</p>
-    <p class="main-stat-el">Total images: 10</p>
-    <p class="main-stat-el">Unique IP`s: 4</p>
+    <p class="main-stat-el">Total images: {{ data['images']['total'] }}</p>
+    <p class="main-stat-el">Unique IP`s: {{ data['images']['unique_ip'] }}</p>
     <p class="main-stat-el">Most active image: image-1</p>
 </div>
 <!--todo: add logs-->
