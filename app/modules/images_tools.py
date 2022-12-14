@@ -54,3 +54,16 @@ def get_unique_ips(images: list) -> set:
     """Function to count unique ips"""
 
     return set(images)
+
+
+def get_most_popular_image(images_requests: list) -> str:
+    """Function to get the most popular image"""
+
+    images = {}
+    for image in images_requests:
+        if image['image'] not in images:
+            images[image['image']] = 1
+        else:
+            images[image['image']] += 1
+
+    return f'image-{max(list(images.items()), key=lambda x: x[1])[0]}'

@@ -1,8 +1,8 @@
 from app import app, render_template, redirect
 
 from flask_login import current_user
-from app.modules.models import *
 from app.modules.images_tools import *
+from app.modules.statistics_tools import *
 
 
 @app.route('/admin/login')
@@ -19,7 +19,8 @@ def admin_dashboard_page():
     data = {
         'images': {
             'total': len(images),
-            'unique_ip': len(get_unique_ips(images))
+            'unique_ip': len(get_unique_ips(images)),
+            'popular_image': get_most_popular_image(get_image_stat())
         }
     }
     return render_template('admin/dashboard_page.html', data=data)
