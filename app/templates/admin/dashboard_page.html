@@ -13,7 +13,7 @@
     <p class="main-stat-header">Images statistics:</p>
     <p class="main-stat-el">Total images: {{ data['images']['total'] }}</p>
     <p class="main-stat-el">Unique IP`s: {{ data['images']['unique_ip'] }}</p>
-    <p class="main-stat-el">Most active image: {{ popular_image }}</p>
+    <p class="main-stat-el">Most active image: {{ data['images']['popular_image'] }}</p>
 </div>
 <!--todo: add logs-->
 {% endblock %}
