@@ -53,11 +53,17 @@ def delete_image(image_id: int) -> bool:
 def get_unique_ips(images: list) -> set:
     """Function to count unique ips"""
 
-    return set(images)
+    ips = []
+    for image in images:
+        ips.append(image.from_ip)
+    return set(ips)
 
 
 def get_most_popular_image(images_requests: list) -> str:
     """Function to get the most popular image"""
+
+    if not images_requests:
+        return 'no requests at any image'
 
     images = {}
     for image in images_requests:
