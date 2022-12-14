@@ -14,8 +14,10 @@
     <p class="main-stat-el">Total images: {{ data['images']['total'] }}</p>
     <p class="main-stat-el">Unique IP`s: {{ data['images']['unique_ip'] }}</p>
     <p class="main-stat-el">Most active image: {{ data['images']['popular_image'] }}</p>
+    <p class="main-stat-get-button"><a href="/admin/image-logs/view">Get image logs</a></p>
+    <p class="main-stat-clear-button"><a href="/admin/image-logs/clear">Clear statistics</a></p>
 </div>
-<!--todo: add logs-->
+<!--todo: add request logs-->
 {% endblock %}
 
 {% block js %}
