@@ -1,5 +1,6 @@
 from app import db
 from app.modules.models import *
+from app.modules.statistics_tools import *
 
 from flask_login import login_user, current_user, logout_user
 from app import app, request, redirect
@@ -38,3 +39,18 @@ def admin_login_handler():
                 pass
             return redirect('/admin/dashboard')
     return admin_login_page(error_code=200)  # dev: Error code 200 is login error code
+
+
+@app.route('/admin/image-logs/view')
+def admin_view_logs_handler():
+    if current_user.is_authenticated:
+        return get_image_stat()
+    return 'not allowed'
+
+
+@app.route('/admin/image-logs/clear')
+def admin_clear_logs_handler():
+    if current_user.is_authenticated:
+        clear_image_stat()
+        return redirect('/admin/dashboard')
+    return 'not allowed'
