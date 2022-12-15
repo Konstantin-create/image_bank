@@ -1,6 +1,7 @@
+import glob
 from typing import Union
 
-from app import db
+from app import db, app_folder
 from app.modules.models import Image
 
 
@@ -73,3 +74,9 @@ def get_most_popular_image(images_requests: list) -> str:
             images[image['image']] += 1
 
     return f'image-{max(list(images.items()), key=lambda x: x[1])[0]}'
+
+
+def get_images_amount() -> int:
+    """Function to get amount of images on local storage"""
+
+    return len(glob.glob(f'{app_folder}/static/data/*'))

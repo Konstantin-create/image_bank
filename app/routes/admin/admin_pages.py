@@ -17,10 +17,13 @@ def admin_dashboard_page():
 
     images = get_images()
     data = {
-        'images': {
-            'total': len(images),
+        'requests': {
+            'total': len(get_image_stat()),
             'unique_ip': len(get_unique_ips(images)),
             'popular_image': get_most_popular_image(get_image_stat())
+        },
+        'images': {
+            'total': get_images_amount()
         }
     }
     return render_template('admin/dashboard_page.html', data=data)
