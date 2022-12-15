@@ -28,3 +28,13 @@ def admin_dashboard_page():
         }
     }
     return render_template('admin/dashboard_page.html', data=data)
+
+
+@app.route('/admin/images')
+def admin_images_page():
+    if not current_user.is_authenticated:
+        return redirect('/admin/login')
+
+    images = get_images()
+
+    return render_template('admin/images_page.html', images=images)

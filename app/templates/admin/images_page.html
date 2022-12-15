@@ -1,0 +1,23 @@
+{% extends 'admin/admin_template.html' %}
+
+{% block title %}<title>Image Bank - Dashboard</title>{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin/images_page_styles.css') }}">
+{% endblock %}}
+
+{% block page_name %}<h1 class="header-title">Images manager</h1>{% endblock %}
+
+{% block content %}
+<div class="images-div">
+    {% for image in images %}
+    <div class="image-el">
+        <img src="/img/{{ image.id }}" alt="image" class="image-el-img">
+        <p class="image-el-remove"><a href="/admin/images/remove/{{ image.id }}">Remove image</a></p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

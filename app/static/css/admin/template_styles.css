@@ -5,7 +5,7 @@
 }
 
 aside {
-    position: relative;
+    position: fixed;
 
     float: left;
     width: 75px;
@@ -54,6 +54,7 @@ main {
     min-height: 100vh;
     height: auto;
     background-color: #171717;
+    margin-left: 75px;
 }
 
 header {

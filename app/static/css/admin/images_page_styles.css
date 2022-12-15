@@ -1,0 +1,41 @@
+a {
+    text-decoration: none;
+    color: #EDF2EF;
+}
+
+.images-div {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.image-el {
+    float: left;
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    margin: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1c1c1c;
+}
+
+.image-el-img {
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.image-el-remove {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #b20707;
+
+    font-family: Cantarell, sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 50px;
+}
