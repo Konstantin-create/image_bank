@@ -38,4 +38,17 @@ a {
     font-weight: 200;
     text-align: center;
     line-height: 50px;
+
+    cursor: pointer;
+}
+
+.image-el-id {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+
+    font-family: Cantarell, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #EDF2EF;
 }

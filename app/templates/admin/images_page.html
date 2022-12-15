@@ -12,6 +12,7 @@
 <div class="images-div">
     {% for image in images %}
     <div class="image-el">
+        <p class="image-el-id">image-{{ image.id }}</p>
         <img src="/img/{{ image.id }}" alt="image" class="image-el-img">
         <p class="image-el-remove"><a href="/admin/images/remove/{{ image.id }}">Remove image</a></p>
     </div>
