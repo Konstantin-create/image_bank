@@ -1,6 +1,7 @@
 from app import db
 from app.modules.models import *
 from app.modules.statistics_tools import *
+from app.modules.images_tools import *
 
 from flask_login import login_user, current_user, logout_user
 from app import app, request, redirect
@@ -53,4 +54,12 @@ def admin_clear_logs_handler():
     if current_user.is_authenticated:
         clear_image_stat()
         return redirect('/admin/dashboard')
+    return 'not allowed'
+
+
+@app.route('/admin/images/remove/<int:image_id>')
+def admin_remove_image_handler(image_id: int):
+    if current_user.is_authenticated:
+        delete_image(image_id)
+        return redirect('/admin/images')
     return 'not allowed'
