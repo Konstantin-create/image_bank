@@ -23,7 +23,8 @@ def admin_dashboard_page():
             'popular_image': get_most_popular_image(get_image_stat())
         },
         'images': {
-            'total': get_images_amount()
+            'total': get_images_amount(),
+            'images_size': get_images_size()
         }
     }
     return render_template('admin/dashboard_page.html', data=data)

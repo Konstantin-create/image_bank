@@ -1,3 +1,4 @@
+import os
 import glob
 from typing import Union
 
@@ -76,7 +77,23 @@ def get_most_popular_image(images_requests: list) -> str:
     return f'image-{max(list(images.items()), key=lambda x: x[1])[0]}'
 
 
+def sizeof_fmt(num, suffix="B"):
+    """Function to convert file size in bytes to human-readable string python"""
+
+    for unit in ["", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi"]:
+        if abs(num) < 1024.0:
+            return f"{num:3.1f}{unit}{suffix}"
+        num /= 1024.0
+    return f"{num:.1f}Yi{suffix}"
+
+
 def get_images_amount() -> int:
     """Function to get amount of images on local storage"""
 
     return len(glob.glob(f'{app_folder}/static/data/*'))
+
+
+def get_images_size() -> str:
+    """Function to get a size of images on local storage"""
+
+    return sizeof_fmt(sum(d.stat().st_size for d in os.scandir(f'{app_folder}/static/data') if d.is_file()))

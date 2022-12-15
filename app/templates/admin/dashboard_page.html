@@ -19,8 +19,8 @@
 </div>
 <div class="main-stat">
     <p class="main-stat-header">Images statistics<p>
-    <p class="main-stat-el">Total image files: </p>
-    <p class="main-stat-el">A size of images: </p>
+    <p class="main-stat-el">Total image files: {{ data['images']['total'] }}</p>
+    <p class="main-stat-el">A size of images: {{ data['images']['images_size'] }}</p>
 </div>
 <!--todo: add request logs-->
 {% endblock %}
