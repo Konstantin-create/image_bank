@@ -38,3 +38,12 @@ def admin_images_page():
     images = get_images()
 
     return render_template('admin/images_page.html', images=images)
+
+
+@app.route('/not-allowed')
+def admin_not_allowed_page():
+    content_data = {
+        'headers': ['My web-site', 'GitHub'],
+        'header_links': ['https://hacknet-dev.tech/', 'https://github.com/Konstantin-create/']
+    }
+    return render_template('user/not_allowed_page.html', content_data=content_data)
