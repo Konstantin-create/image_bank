@@ -1,3 +1,11 @@
+aside {
+    height: auto;
+}
+
+main {
+    padding-left: 75px;
+}
+
 a {
     text-decoration: none;
     color: #EDF2EF;
