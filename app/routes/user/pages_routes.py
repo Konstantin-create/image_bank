@@ -34,3 +34,8 @@ def image_page(image_id: int):
 
     add_image_view(image_id, request.remote_addr)
     return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+
+
+@app.route('/not-allowed')
+def not_allowed_page():
+    return render_template('user/not_allowed_page.html', content_data=content_data)
