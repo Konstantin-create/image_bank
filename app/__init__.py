@@ -12,9 +12,15 @@ from flask import Flask, render_template, url_for, request, redirect, send_file
 # Flask login import
 from flask_login import LoginManager
 
+
+def page_not_found(e):
+    return redirect('/not-found')
+
+
 # Flask init
 app = Flask(__name__)
 app.config.from_object(Config)
+app.register_error_handler(404, page_not_found)
 
 # DB init
 db = SQLAlchemy(app)
