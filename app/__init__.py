@@ -13,9 +13,7 @@ from flask import Flask, render_template, url_for, request, redirect, send_file
 from flask_login import LoginManager
 
 
-def page_not_found(e):
-    return redirect('/not-found')
-
+from app.routes.error_code_pages import *
 
 # Flask init
 app = Flask(__name__)
@@ -33,4 +31,5 @@ app_folder = os.path.dirname(__file__)
 
 from app.modules.models import *
 from app.routes.admin import admin_login
-from app.routes import *
+from app.routes.user import *
+from app.routes.admin import *
