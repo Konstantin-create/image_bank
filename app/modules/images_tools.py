@@ -45,7 +45,7 @@ def delete_image(image_id: int) -> bool:
 
     try:
         image = get_image(image_id)
-        os.remove(f'{app_folder}/data/image-{image_id}.jpg')
+        os.remove(f'{app_folder}/static/data/image-{image_id}.jpg')
         db.session.delete(image)
         db.session.commit()
         return True
