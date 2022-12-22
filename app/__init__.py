@@ -30,4 +30,5 @@ login_manager = LoginManager(app)
 app_folder = os.path.dirname(__file__)
 
 from app.modules.models import *
-from app.routes import *
+from app.routes.admin import *
+from app.routes.user import *

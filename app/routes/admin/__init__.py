@@ -1,2 +1,3 @@
-from .admin_pages import *
-from .admin_handlers import *
+from app.routes.admin.admin_login import *
+from app.routes.admin.admin_pages import *
+from app.routes.admin.admin_handlers import *
