@@ -7,11 +7,15 @@ from app.modules.statistics_tools import *
 
 @app.route('/admin/login')
 def admin_login_page(error_code: int = 100):  # dev: Code 100 is OK code
+    """Function of login page handler"""
+
     return render_template('admin/login_page.html')
 
 
 @app.route('/admin/dashboard')
 def admin_dashboard_page():
+    """Function of dashboard page handler"""
+
     if not current_user.is_authenticated:
         return redirect('/admin/login')
 
@@ -32,6 +36,8 @@ def admin_dashboard_page():
 
 @app.route('/admin/images')
 def admin_images_page():
+    """Function of images page handler"""
+
     if not current_user.is_authenticated:
         return redirect('/admin/login')
 
@@ -42,6 +48,8 @@ def admin_images_page():
 
 @app.route('/not-allowed')
 def admin_not_allowed_page():
+    """Function of not allowed page handler"""
+
     content_data = {
         'headers': ['My web-site', 'GitHub'],
         'header_links': ['https://hacknet-dev.tech/', 'https://github.com/Konstantin-create/']
