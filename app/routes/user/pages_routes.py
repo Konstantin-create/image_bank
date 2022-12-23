@@ -23,6 +23,7 @@ def image_manager_page(image_id: int):
         image=image,
         content_data=content_data,
         your_image=request.remote_addr == image.from_ip,
+        server_ip=request.host
     )
 
 
