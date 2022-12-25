@@ -23,7 +23,7 @@
     <div class="left">
         <div class="image-link">
             <p class="image-link-text" id="img-link">http://{{ server_ip }}/img/{{ image.id }}</p>
-            <button class="image-link-button" onclick="copyContent()">Copy!</button>
+            <button class="image-link-button" onclick="copyContent()" id="img-link-btn">Copy!</button>
 
         </div>
         <p class="image-timestamp">Post time stamp: {{ image.time_stamp.strftime("%Y-%m-%d %H:%M") }}</p>
@@ -41,7 +41,8 @@
     const copyContent = async () => {
         try {
             await navigator.clipboard.writeText(text);
-            // Success
+            document.getElementById('img-link-btn').innerHTML = 'Copied!'
+            document.getElementById('img-link-btn').style.color = 'green'
         } catch (err) {
             // Error
         }
