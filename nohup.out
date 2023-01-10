@@ -1,0 +1,1270 @@
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://83.220.172.52:5000
+[33mPress CTRL+C to quit[0m
+77.233.212.118 - - [22/Dec/2022 22:19:18] "GET / HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:19:18] "[36mGET /static/css/user/index_styles.css HTTP/1.1[0m" 304 -
+[2022-12-22 22:19:22,160] ERROR in app: Exception on /add/image [POST]
+Traceback (most recent call last):
+  File "/home/hacknet/.local/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hacknet/.local/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hacknet/.local/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hacknet/.local/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/handlers_routes.py", line 13, in add_image_handler
+    image.save(f'app/static/data/image-{current_id}.jpg')
+  File "/home/hacknet/.local/lib/python3.8/site-packages/werkzeug/datastructures.py", line 3002, in save
+    dst = open(dst, "wb")
+PermissionError: [Errno 13] Permission denied: 'app/static/data/image-1.jpg'
+77.233.212.118 - - [22/Dec/2022 22:19:22] "[35m[1mPOST /add/image HTTP/1.1[0m" 500 -
+ * Serving Flask app 'app'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://83.220.172.52:5000
+[33mPress CTRL+C to quit[0m
+77.233.212.118 - - [22/Dec/2022 22:20:17] "[32mPOST /add/image HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:17] "[32mGET /image-manager/1 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:17] "GET /not-found HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:17] "[36mGET /static/css/user/index_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:17] "[36mGET /static/css/admin/not_allowed_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:32] "[32mGET /image-manager/1 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:32] "GET /not-found HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:32] "GET /static/css/user/index_styles.css HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:32] "[36mGET /static/css/admin/not_allowed_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:36] "GET / HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:37] "[36mGET /static/css/user/index_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:39] "[32mPOST /add/image HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:39] "[32mGET /image-manager/1 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:39] "GET /not-found HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:40] "[36mGET /static/css/user/index_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:40] "[36mGET /static/css/admin/not_allowed_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:53] "[32mGET /admin/dashboard/ HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:20:53] "GET /not-found HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:20:53] "[36mGET /static/css/user/index_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:20:53] "[36mGET /static/css/admin/not_allowed_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:01] "GET /admin/login HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:01] "[36mGET /static/css/admin/login_page_style.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[32mPOST /admin/login/form HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "GET /admin/dashboard HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[36mGET /static/css/admin/dashboard_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:08] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:10,222] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+[2022-12-22 22:21:10,227] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:10,237] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:10] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:12,319] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:12,329] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+[2022-12-22 22:21:12,337] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:12] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "GET /static/css/admin/template_styles.css HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:13,305] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:13,322] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:13,329] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:13] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:14,359] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:14,361] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+[2022-12-22 22:21:14,369] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:14] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:15,328] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:15,337] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+[2022-12-22 22:21:15,345] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:15] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:16,081] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+[2022-12-22 22:21:16,089] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+[2022-12-22 22:21:16,097] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[32mGET /admin/images/remove/2 HTTP/1.1[0m" 302 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:16,414] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:16,430] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:16,434] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:16] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:21:59,218] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:21:59,229] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+[2022-12-22 22:21:59,235] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:21:59] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:01,428] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:01,450] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+[2022-12-22 22:22:01,451] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:01,837] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:01,859] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:01,861] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:01,965] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:01,988] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:01] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:01,997] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:02,152] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:02,160] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:02,170] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:02] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:02] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:03] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:04,994] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:04] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+[2022-12-22 22:22:05,250] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:05] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:06,512] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:06,530] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:06,538] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:06,757] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:06,774] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+[2022-12-22 22:22:06,779] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:06] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:07,354] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:07,366] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:07] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:08,062] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:08,066] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:08] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "GET /admin/images HTTP/1.1" 200 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[36mGET /static/css/admin/template_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[36mGET /static/css/admin/images_page_styles.css HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[36mGET /static/img/admin/logout.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[36mGET /static/img/admin/statistics.png HTTP/1.1[0m" 304 -
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[36mGET /static/img/admin/images.png HTTP/1.1[0m" 304 -
+[2022-12-22 22:22:09,706] ERROR in app: Exception on /img/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-4.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[35m[1mGET /img/4 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:09,719] ERROR in app: Exception on /img/2 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-2.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[35m[1mGET /img/2 HTTP/1.1[0m" 500 -
+[2022-12-22 22:22:09,721] ERROR in app: Exception on /img/3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/hacknet/image_bank/app/routes/user/pages_routes.py", line 36, in image_page
+    return send_file(f'static/data/image-{image_id}.jpg', mimetype='image/jpg')
+  File "/usr/local/lib/python3.8/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_bank/app/static/data/image-3.jpg'
+77.233.212.118 - - [22/Dec/2022 22:22:09] "[35m[1mGET /img/3 HTTP/1.1[0m" 500 -
