@@ -1,16 +1,12 @@
 from app.modules.images_tools import *
+from app.modules.content_tools import *
 from app.modules.statistics_tools import add_image_view
 from app import app, render_template, request, send_file, redirect
-
-content_data = {
-    'headers': ['My web-site', 'GitHub'],
-    'header_links': ['https://hacknet-dev.tech/', 'https://github.com/Konstantin-create/']
-}
 
 
 @app.route('/')
 def index_page():
-    return render_template('user/index_page.html', content_data=content_data)
+    return render_template('user/index_page.html', content_data=get_content())
 
 
 @app.route('/image-manager/<int:image_id>')
@@ -21,8 +17,9 @@ def image_manager_page(image_id: int):
     return render_template(
         'user/image_manager_page.html',
         image=image,
-        content_data=content_data,
+        content_data=get_content(),
         your_image=request.remote_addr == image.from_ip,
+        server_ip=request.host
     )
 
 
@@ -38,9 +35,9 @@ def image_page(image_id: int):
 
 @app.route('/not-allowed')
 def not_allowed_page():
-    return render_template('user/not_allowed_page.html', content_data=content_data)
+    return render_template('user/not_allowed_page.html', content_data=get_content())
 
 
 @app.route('/not-found')
 def not_found_page():
-    return render_template('user/not_found_page.html', content_data=content_data)
+    return render_template('user/not_found_page.html', content_data=get_content())

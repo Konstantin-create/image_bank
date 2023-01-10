@@ -145,3 +145,25 @@ main {
 .input-file input[type=file]:disabled + span {
     background-color: #797979;
 }
+
+@media (max-width: 725px) {
+    .header-items {
+        width: 50%;
+    }
+
+    .main-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-items {
+        width: 100%;
+    }
+
+    .sub-header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -3529,3 +3529,7 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/hacknet/image_ban
 3.22.216.243 - - [10/Jan/2023 15:19:20] "[32mGET /index.php HTTP/1.1[0m" 302 -
 3.22.216.243 - - [10/Jan/2023 15:19:22] "[32mGET /wp-content/plugins/stageshow/stageshow_redirect.php?url=http%3A%2F%2Finteract.sh HTTP/1.1[0m" 302 -
 3.22.216.243 - - [10/Jan/2023 15:23:21] "[32mPOST /homeaction.php HTTP/1.1[0m" 302 -
+3.22.216.243 - - [10/Jan/2023 15:25:19] "[32mGET /ACSServer/WebServlet?act=getMapImg_acs2&filename=../../../../../../../etc/passwd HTTP/1.1[0m" 302 -
+3.22.216.243 - - [10/Jan/2023 15:25:23] "[32mGET /ACSServer/WebServlet?act=getMapImg_acs2&filename=../../../../../../../windows/win.ini HTTP/1.1[0m" 302 -
+3.22.216.243 - - [10/Jan/2023 15:27:55] "[32mPOST /userportal/Controller?mode=8700&operation=1&datagrid=179&json={"🦞":"test"} HTTP/1.1[0m" 302 -
+3.22.216.243 - - [10/Jan/2023 15:29:49] "[32mGET /login?redirect=%2F HTTP/1.1[0m" 302 -

@@ -22,8 +22,8 @@
     </div>
     <div class="left">
         <div class="image-link">
-            <p class="image-link-text">http://127.0.0.1:5000/img/{{ image.id }}</p>
-            <button class="image-link-button">Copy!</button>
+            <p class="image-link-text" id="img-link">http://{{ server_ip }}/img/{{ image.id }}</p>
+            <button class="image-link-button" onclick="copyContent()" id="img-link-btn">Copy!</button>
 
         </div>
         <p class="image-timestamp">Post time stamp: {{ image.time_stamp.strftime("%Y-%m-%d %H:%M") }}</p>
@@ -35,4 +35,18 @@
     {% endif %}
 </main>
 </body>
+<script>
+
+    let text = document.getElementById('img-link').innerHTML
+    const copyContent = async () => {
+        try {
+            await navigator.clipboard.writeText(text);
+            document.getElementById('img-link-btn').innerHTML = 'Copied!'
+            document.getElementById('img-link-btn').style.color = 'green'
+        } catch (err) {
+            // Error
+        }
+    }
+
+</script>
 </html>
